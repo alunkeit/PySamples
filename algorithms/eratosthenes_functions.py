@@ -35,10 +35,11 @@ the result is an array and contains only the prime numbers without any -1 values
 """
 result = []
 
-"""
-initialize the array the algorithm is working on
-"""
+
 def initialize(upper_bound: int):
+    """
+    initialize the array the algorithm is working on
+    """
     logging.info('------------------')
     logging.info(f"initializing array up to {upper_bound}")
     logging.info('------------------')
@@ -47,10 +48,10 @@ def initialize(upper_bound: int):
         numbers.append(x)
 
 
-"""
-This functions sieves out the primes in the array
-"""
 def sieve():
+    """
+    This functions sieves out the primes in the array
+    """
     logging.info('------------------')
     logging.info(f"size of search base is {len(numbers)}")
     logging.info('------------------')
@@ -65,19 +66,20 @@ def sieve():
                 numbers[y] = -1
 
 
-"""
-wipes out the -1 values from the array
-"""
 def clean_numbers():
+    """
+    wipes out the -1 values from the array
+    """
     logging.info('cleaning numbers array')
     for x in range(2, len(numbers)):
         if numbers[x] != -1:
             result.append(numbers[x])
 
-"""
-Executes the algorithm
-"""
+
 if __name__ == '__main__':
+    """
+    Executes the algorithm
+    """
     logging.info('starting program')
 
     initialize(100)
