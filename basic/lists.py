@@ -1,5 +1,11 @@
 """
-For education purposes
+Licensed under the Educational Community License,  Version 2.0 (the “License”); you may not
+use this file except in compliance with the License.
+
+You may obtain a copy of the License at http://www.osedu.org/licenses/ECL-2.0 Unless required
+by applicable law or agreed to in writing, software distributed under the License is distributed
+on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
 
 This implementation file shows some basic operations on lists.
 """
@@ -61,3 +67,15 @@ print_list_properties(list1)
 # lists can be manipulated using comprehensions. This sample doubles all items in the list.
 list3 = [e * 2 for e in list1]
 print_list_properties(list3)
+
+# comprehensions can be used with conditional statements
+list4 = [num for num in range(1, 10) if num % 2 == 0 ]
+print_list_properties(list4)
+
+# Elements of lists can be copied into a new list using slicing syntax
+list5 = list3[:]
+print_list_properties(list5)
+
+# Slicing allows to copy a subset. The example copies the elements starting at index 1 to index 8
+list5 = list3[1:8]
+print_list_properties(list5)
