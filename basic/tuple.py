@@ -35,3 +35,11 @@ print(f"the first element is address 0 -> {t3[0]}")
 
 for c in range(len(t3)):
     print(f"Element in tuple t3[{c}]: {t3[c]}")
+
+# tuple packing. the following sample shows a valid initialisation of a tuple
+t5 = 1,2,3
+print(t5)
+
+# unpacking the values. The values are stored separately in the variables
+x1, x2, x3 = t5
+print(x1, x2, x3)
