@@ -27,6 +27,10 @@ def basic_function_no_arguments():
 	If no explicit return value has been declared, the function returns None
 	"""
     print("hello from function with no arguments")
+    """
+    Returning one or more values is optional
+    """
+    return 23
 
 
 def basic_function_one_argument(x):
@@ -83,6 +87,15 @@ def function_with_two_return_values() -> []:
     return 10, 11, 12
 
 
+def function_with_explicit_arguments(x: int, y: float, z: str):
+    print(f"type of x = {type(x)}")
+    print(f"type of y = {type(y)}")
+    print(f"type of z = {type(z)}")
+
+    k = x / 3
+    return k
+
+
 if __name__ == '__main__':
     basic_function_no_arguments()
     basic_function_one_argument(10)
@@ -99,3 +112,5 @@ if __name__ == '__main__':
     # a function can be stored in a variable, this concept is similar to function pointers in C/C++
     fun = basic_function_no_arguments
     fun()
+    r = function_with_explicit_arguments(5, 5.0, 'hello')
+    print(f"return : {r}")
